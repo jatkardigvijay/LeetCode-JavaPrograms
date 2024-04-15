@@ -1,1 +1,33 @@
+package com.jbd;
 
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class AddTwoStrings {
+
+	public static void main(String[] args) {
+
+		String number1, number2;
+		Scanner input = new Scanner(System.in);
+		number1 = input.nextLine();
+		System.out.println("Number 1 is : " + number1);
+		number2 = input.nextLine();
+		System.out.println("Number 2 is : " + number2);
+		input.close();
+		addStrings(number1, number2);
+
+	}
+
+	private static String addStrings(String num1, String num2) {
+		
+		BigInteger number1 = new BigInteger(num1);
+		BigInteger number2 = new BigInteger(num2);
+		
+		BigInteger sum = number1.add(number2);
+		
+		String result2 = sum.toString();
+		
+		return result2;
+		
+	}
+}
